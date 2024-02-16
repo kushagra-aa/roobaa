@@ -22,9 +22,10 @@
   - [] /users
     - [] Get
     - [] Add
+    - [] /login
     - [] /:id
-      - [] Edit
       - [] Delete
+        - [] /change-password
 - [] Logging Middleware
 - [] Additional Logic
   - [] Add AuthToken for API calls

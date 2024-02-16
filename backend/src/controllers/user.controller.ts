@@ -8,6 +8,13 @@ const getUsers = asyncHandler(async (req, res) => {
     .status(200)
     .json(new ApiResponse(200, data, "Users found successfully"));
 });
+const loginUser = asyncHandler(async (req, res) => {
+  let data = {};
+
+  return res
+    .status(200)
+    .json(new ApiResponse(200, data, "Users found successfully"));
+});
 const addNewUser = asyncHandler(async (req, res) => {
   let data = {};
 
@@ -30,4 +37,4 @@ const removeUser = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, data, "User Deleted successfully"));
 });
 
-export { getUsers, addNewUser, changePassword, removeUser };
+export { getUsers, loginUser, addNewUser, changePassword, removeUser };
