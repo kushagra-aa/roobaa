@@ -12,9 +12,11 @@ app.use(express.json({ limit: "20kb" }));
 app.use(express.urlencoded({ extended: false }));
 
 // Middleware Imports
+import userAuthMiddleware from "./middlewares/userAuth.middleware.js";
 // Routes Imports
+import userRouter from "./routes/user.routes.js";
 
 // Routes Declarations
-// app.use("/api/v1/leaves", clientAuthMiddleware, leaveRouter);
+app.use("/api/v1/users", userAuthMiddleware, userRouter);
 
 export { app };

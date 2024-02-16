@@ -14,10 +14,10 @@
   - [X] Init
   - [X] Models
     - [X] User
-- [] Setup Express.js
-  - [] Routes
-  - [] Controllers
-  - [] Middlewares
+- [X] Setup Express.js
+  - [X] Routes
+  - [X] Controllers
+  - [X] Middlewares
 - [] Make Endpoint(s)
   - [] /users
     - [] Get
