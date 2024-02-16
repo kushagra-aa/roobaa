@@ -10,10 +10,10 @@
 
 ### BackEnd
 
-- [] Integrate MongoDB
-  - [] Init
-  - [] Models
-    - [] User
+- [X] Integrate MongoDB
+  - [X] Init
+  - [X] Models
+    - [X] User
 - [] Setup Express.js
   - [] Routes
   - [] Controllers
