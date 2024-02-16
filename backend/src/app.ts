@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extended: false }));
 
 // Middleware Imports
 import userAuthMiddleware from "./middlewares/userAuth.middleware.js";
+import logMiddleware from "./middlewares/log.middleware.js";
+
+app.use(logMiddleware);
+
 // Routes Imports
 import userRouter from "./routes/user.routes.js";
 

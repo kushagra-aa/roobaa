@@ -26,7 +26,7 @@
     - [] /:id
       - [] Delete
         - [] /change-password
-- [] Logging Middleware
+- [X] Logging Middleware
 - [] Additional Logic
   - [] Add AuthToken for API calls
   - [] Save Token

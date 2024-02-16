@@ -1,7 +1,7 @@
 type LogType = {
   timestamp: string;
   url: string;
-  endpoint: string;
+  method: string;
   accessToken: string;
 };
 
