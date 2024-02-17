@@ -18,18 +18,18 @@
   - [X] Routes
   - [X] Controllers
   - [X] Middlewares
-- [] Make Endpoint(s)
-  - [] /users
-    - [] Get
-    - [] Add
-    - [] /login
-    - [] /:id
-      - [] Delete
-        - [] /change-password
+- [X] Make Endpoint(s)
+  - [X] /users
+    - [X] Get
+    - [X] Add
+    - [X] /login
+    - [X] /:id
+      - [X] Delete
+        - [X] /change-password
 - [X] Logging Middleware
 - [] Additional Logic
-  - [] Add AuthToken for API calls
-  - [] Save Token
+  - [X] Add AuthToken for API calls
+  - [X] Save Token
   - [] MongoDB aggregation framework
 
 ### FrontEnd

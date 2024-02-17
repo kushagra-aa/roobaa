@@ -1,11 +1,14 @@
 import { Request, NextFunction } from "express";
 import ApiError from "../helpers/apiError.js";
 import LogType from "../types/LogType.js";
+import asyncHandler from "../helpers/asyncHandler.js";
 
-const logMiddleware = (req: Request, _, next: NextFunction) => {
+const logMiddleware = asyncHandler((req: Request, _, next: NextFunction) => {
   try {
     const log: LogType = {
-      accessToken: req.headers.authorization,
+      accessToken:
+        req.cookies?.accessToken ||
+        req.header("Authorization")?.replace("Bearer ", ""),
       timestamp: new Date().toISOString(),
       url: req.url,
       method: req.method,
@@ -17,6 +20,6 @@ const logMiddleware = (req: Request, _, next: NextFunction) => {
   } catch (error) {
     throw new ApiError(401, error?.message || "Invalid access token");
   }
-};
+});
 
 export default logMiddleware;

@@ -8,7 +8,7 @@ const asyncHandler =
     try {
       await requestHandler(req, res, next);
     } catch (error) {
-      res.status(500).json(error);
+      res.status(error.statusCode || 500).json(error);
     }
   };
 

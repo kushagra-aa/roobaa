@@ -38,5 +38,14 @@ userSchema.methods.generateAccessToken = function () {
     }
   );
 };
+interface UserDoc extends Document {
+  name: string;
+  email: string;
+  age: number;
+  country: string;
+  password: string;
+  generateAccessToken: () => Promise<string>;
+  isPasswordCorrect: (password: string) => Promise<string>;
+}
 
-export const User = model("User", userSchema);
+export const User = model<UserDoc>("User", userSchema);
