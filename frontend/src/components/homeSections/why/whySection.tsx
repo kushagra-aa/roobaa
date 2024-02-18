@@ -1,4 +1,6 @@
+import "./whySection.css";
+
 function WhySection() {
-  return <div>WhySection</div>;
+  return <section id="why">WhySection</section>;
 }
 export default WhySection;

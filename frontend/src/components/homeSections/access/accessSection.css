@@ -1,0 +1,55 @@
+#access {
+  @apply flex gap-10 mb-8 mt-10;
+  padding: 0 5rem 0 5rem;
+
+  & > .left {
+    @apply flex-1 flex items-center justify-center;
+    & > div {
+      @apply relative;
+      width: 460px;
+      height: 362px;
+    }
+  }
+  & > .right {
+    @apply relative flex-1;
+
+    & > h3 {
+      @apply text-5xl mb-4;
+
+      & > span {
+        display: block;
+
+        &:nth-of-type(1) {
+          @apply ml-0;
+        }
+        &:nth-of-type(2) {
+          @apply ml-10;
+        }
+        &:nth-of-type(3) {
+          @apply ml-16;
+        }
+      }
+    }
+    & > p {
+      @apply font-light mb-4;
+    }
+    & > button {
+      @apply capitalize font-medium;
+
+      padding: 0.25rem 1.5rem;
+      border: 1px solid rgb(var(--background-rgb));
+      color: rgb(var(--white-rgb));
+    }
+
+    & > .background {
+      @apply absolute;
+
+      bottom: -10%;
+      right: -15%;
+      height: 350px;
+      width: 500px;
+      mix-blend-mode: color-dodge;
+      opacity: 0.9;
+    }
+  }
+}
