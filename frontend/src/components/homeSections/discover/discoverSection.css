@@ -1,0 +1,182 @@
+#discover {
+  @apply grid gap-10;
+
+  grid-template-columns: 1fr 0.8fr;
+  padding: 0 5rem 0 5rem;
+
+  & > .left {
+    @apply flex-1;
+
+    & > h2 {
+      @apply font-light text-4xl capitalize;
+    }
+    & > h3 {
+      @apply font-medium text-3xl capitalize mb-8;
+    }
+
+    & > .greensteps {
+      @apply flex gap-4 mb-8;
+
+      & > button {
+        @apply capitalize relative;
+
+        padding: 0.5rem 2rem 0.5rem 0.25rem;
+
+        &::before {
+          @apply absolute;
+
+          top: 0;
+          left: 0;
+          content: "";
+          height: 100%;
+          width: 5%;
+          border-bottom: 4px solid rgb(var(--accent-1-rgb));
+          transition: width 1s ease-in-out;
+        }
+
+        &.active {
+          color: rgb(var(--accent-1-rgb));
+          &::before {
+            width: 100%;
+          }
+          &:is(:hover, :focus-visible) {
+            &::before {
+              width: 102%;
+            }
+          }
+        }
+        &:is(:hover, :focus-visible) {
+          color: rgb(var(--accent-1-rgb), 0.6);
+          box-shadow: none;
+          filter: none;
+          &::before {
+            width: 20%;
+            border-color: rgb(var(--accent-1-rgb));
+          }
+        }
+      }
+    }
+
+    & > p {
+      @apply mb-2 font-light;
+
+      width: 80%;
+      & > span {
+        @apply font-medium;
+
+        display: block;
+      }
+    }
+    & > button {
+      @apply capitalize;
+
+      padding: 0.5rem 1.5rem 0.5rem 0.1rem;
+      border-bottom: 1px solid rgb(var(--white-rgb));
+
+      &:is(:hover, :focus-visible) {
+        color: rgb(var(--accent-1-rgb), 0.6);
+        border-color: rgb(var(--accent-1-rgb), 0.6);
+        box-shadow: none;
+        filter: none;
+      }
+    }
+  }
+
+  & > .right {
+    @apply flex-1;
+
+    background: whitesmoke;
+    color: rgb(var(--background-rgb));
+
+    & > .banner {
+      --height: 180px;
+      @apply relative;
+
+      isolation: isolate;
+      padding: 1.75rem 2rem;
+      height: var(--height);
+      color: whitesmoke;
+
+      & > img {
+        z-index: -1;
+      }
+
+      & > h4 {
+        @apply text-4xl capitalize;
+      }
+      & > p.location {
+        @apply text-lg capitalize;
+      }
+    }
+
+    &
+      > :is(
+        .tags_container,
+        .other_tags_container,
+        .price_container,
+        .actions
+      ) {
+      @apply flex flex-wrap gap-x-3 gap-y-1.5 mt-3;
+
+      padding: 0.1rem 1rem;
+
+      & > p {
+        @apply capitalize text-sm;
+
+        opacity: 0.4;
+        width: 100%;
+      }
+      & > div.tag {
+        @apply capitalize rounded-sm text-xs;
+
+        background: #0000001e;
+        padding: 0.25rem 0.5rem;
+        border: 1px solid rgba(58, 58, 58, 0.432);
+
+        &.focus {
+          color: white;
+          background: #0f1640;
+          border: 1px solid rgb(var(--accent-1-rgb));
+        }
+      }
+      &.other_tags_container > .tag {
+        opacity: 0.7;
+      }
+      &.price_container {
+        & > .price_card {
+          @apply text-base font-medium;
+          padding: 1rem 1.5rem 0.65rem 0.75rem;
+          border: 1px solid rgba(0, 0, 0, 0.37);
+          color: rgb(var(--accent-1-rgb));
+
+          & > span {
+            color: rgb(var(--background-rgb));
+            @apply text-xs font-extralight;
+            display: block;
+          }
+
+          &.focus {
+            background-color: rgb(var(--accent-1-rgb), 0.1);
+            border: 1px solid rgb(var(--accent-1-rgb));
+          }
+        }
+      }
+      &.actions {
+        & > button {
+          @apply capitalize font-semibold mb-4;
+
+          padding: 0.25rem 1.5rem;
+
+          &.filled {
+            background-color: rgb(var(--background-rgb));
+            color: rgb(var(--white-rgb));
+          }
+          &.bordered {
+            border: 1px solid rgb(var(--background-rgb));
+            color: rgb(var(--background-rgb));
+          }
+        }
+      }
+    }
+  }
+}

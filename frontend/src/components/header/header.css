@@ -3,7 +3,8 @@ header {
   top: 0;
   width: 100vw;
   height: var(--header-height);
-  padding: 20px 80px 0 80px;
+  padding: 0.75rem 5rem 0 5rem;
+  background-color: rgb(var(--background-rgb));
   display: flex;
   align-items: center;
   justify-content: center;
