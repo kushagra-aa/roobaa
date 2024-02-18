@@ -10,16 +10,18 @@ import WhySection from "@/components/homeSections/why/whySection";
 
 export default function Home() {
   return (
-    <main className="">
+    <>
       <Header />
-      <HeroSection />
-      <DiscoverSection />
-      <AccessSection />
-      <WhySection />
-      <HowSection />
-      <MoreSection />
-      <ContactSection />
-      <BlankSection />
-    </main>
+      <main className="">
+        <HeroSection />
+        <DiscoverSection />
+        <AccessSection />
+        <WhySection />
+        <HowSection />
+        <MoreSection />
+        <ContactSection />
+        <BlankSection />
+      </main>
+    </>
   );
 }

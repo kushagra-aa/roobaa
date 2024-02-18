@@ -1,0 +1,41 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: var(--header-height);
+  padding: 20px 80px 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > nav {
+    padding-bottom: 0.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    & > .logo {
+      @apply justify-self-start;
+
+      position: relative;
+      width: 94.91px;
+      height: 37.03px;
+      justify-self: flex-start;
+    }
+    & > ul {
+      @apply justify-self-end flex gap-9;
+
+      & > li {
+        @apply grid place-items-center capitalize font-extralight;
+
+        & > button {
+          @apply capitalize font-semibold;
+
+          padding: 0.25rem 1.5rem;
+          background-color: rgb(var(--white-rgb));
+          color: rgb(var(--background-rgb));
+        }
+      }
+    }
+  }
+}

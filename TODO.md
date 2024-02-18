@@ -34,17 +34,8 @@
 
 ### FrontEnd
 
-- [] Make Components
-  - [] Modal(s)
-    - [] SignUp | Add
-    - [] Login | Get
-      - [] Forgot Password | Edit
-    - [] Logout
-    - [] Delete Account | Delete
-  - [] Logs Page
-    - [] Logs Table
-- [] From Validator
 - [] Home Page
+  - [X] Header
   - [] Hero
   - [] Discover
   - [] Access
@@ -53,4 +44,12 @@
   - [] More
   - [] Contact
   - [] Blank
+- [] Make Components
+  - [] Modal(s)
+    - [] SignUp | Add
+    - [] Login | Get
+      - [] Forgot Password | Edit
+    - [] Logout
+    - [] Delete Account | Delete
+- [] From Validator
 - [] Animations and Interactions
