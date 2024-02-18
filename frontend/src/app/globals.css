@@ -11,12 +11,17 @@
 }
 
 body {
-  --header-height: 100px;
+  --header-height: 50px;
   color: rgb(var(--white-rgb));
   background-color: rgb(var(--background-rgb));
 
   & > main {
     margin-top: var(--header-height);
+    overflow-x: hidden;
+
+    & > section {
+      width: 100vw;
+    }
   }
 }
 
